@@ -1,0 +1,108 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".startRunning">
+
+    <TextView
+        android:id="@+id/titleStartRunning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@id/mapStartRunning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/mapStartRunning"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/timeStartRunning"
+        />
+
+    <TextView
+        android:id="@+id/timeStartRunning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="26sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/mapStartRunning"
+        app:layout_constraintStart_toEndOf="@id/distanceStartRunning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/infoStartRunning"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/distanceStartRunning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="26sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/mapStartRunning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/timeStartRunning"
+        app:layout_constraintBottom_toTopOf="@id/infoStartRunning"
+        />
+
+
+    <TextView
+        android:id="@+id/infoStartRunning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:text="@string/info_start_running"
+        app:layout_constraintTop_toBottomOf="@id/timeStartRunning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/startRunning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/start_running"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="invisible"
+        android:backgroundTint="@color/LightGrey"
+        app:layout_constraintTop_toBottomOf="@id/infoStartRunning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/stopRunning"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/stopRunning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_running"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="invisible"
+        android:backgroundTint="@color/LightGrey"
+        app:layout_constraintTop_toBottomOf="@id/infoStartRunning"
+        app:layout_constraintStart_toEndOf="@id/startRunning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

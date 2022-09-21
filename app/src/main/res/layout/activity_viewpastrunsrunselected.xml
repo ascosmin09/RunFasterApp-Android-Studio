@@ -1,0 +1,129 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewPastRunsRunSelected">
+
+    <fragment
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/mapPastRun"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/minutesPastRun"
+        />
+
+    <TextView
+        android:id="@+id/minutesPastRun"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="28sp"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toBottomOf="@id/mapPastRun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/secondsPastRun"
+        app:layout_constraintBottom_toTopOf="@id/tablePastRun"
+        />
+
+    <TextView
+        android:id="@+id/secondsPastRun"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="28sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/mapPastRun"
+        app:layout_constraintStart_toEndOf="@id/minutesPastRun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tablePastRun"
+        />
+
+
+    <TableLayout
+        android:id="@+id/tablePastRun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minutesPastRun"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TableRow
+            android:id="@+id/firstRowPastRun"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/secondRowPastRun" >
+
+            <TextView
+                android:id="@+id/distancePastRunTXT"
+                android:text="Distance ran:"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/distancePastRun"
+                android:text=""
+                android:textSize="18sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/secondRowPastRun"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstRowPastRun"
+            app:layout_constraintBottom_toTopOf="@+id/thirdRowPastRun" >
+
+            <TextView
+                android:id="@+id/timePastRunTXT"
+                android:text="Completed in:"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/timePastRun"
+                android:text=""
+                android:textSize="18sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/thirdRowPastRun"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/secondRowPastRun"
+            app:layout_constraintBottom_toTopOf="@+id/fourthRowPastRun" >
+
+            <TextView
+                android:id="@+id/averagePacePastRunTXT"
+                android:text="Average pace:"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/averagePacePastRun"
+                android:text=""
+                android:textSize="18sp"
+                />
+        </TableRow>
+
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

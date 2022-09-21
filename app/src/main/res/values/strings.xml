@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">RunFasterApp</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="start_running">Start running</string>
+    <string name="create_route">Create route</string>
+    <string name="view_routes">View Routes</string>
+    <string name="view_past_runs">View past runs</string>
+    <string name="suggestion">There are no suggestions yet. Complete 10 runs to receive a a new suggestion.</string>
+    <string name="view_reports">View reports</string>
+    <string name="minutes">min</string>
+    <string name="sec">sec</string>
+    <string name="save_route">Save route</string>
+    <string name="set_timer">SET TIMER</string>
+    <string name="google_maps_key">AIzaSyB7yQMpeV6XxSXx1fFgllSwreTdF0y-T4o</string>
+    <string name="distance">Distance</string>
+    <string name="undo">Undo</string>
+    <string name="reset">Reset</string>
+    <string name="route_title">Route title</string>
+    <string name="min">min</string>
+    <string name="delete_route">Delete route</string>
+    <string name="stop_running">Stop running</string>
+    <string name="info_start_running">If it\'s a circular route, please walk to any marker on the map in order to activate the start button. If not please walk to the first/last marker.</string>
+</resources>

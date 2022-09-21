@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".createRoute">
+
+    <Button
+        android:id="@+id/undoCreateRoute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/LightGrey"
+        android:text="@string/undo"
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@id/mapCreateRoute"
+        app:layout_constraintEnd_toStartOf="@+id/resetCreateRoute"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/resetCreateRoute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/LightGrey"
+        android:text="@string/reset"
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toTopOf="@id/mapCreateRoute"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/undoCreateRoute"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/mapCreateRoute"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toBottomOf="@id/undoCreateRoute"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/minutesCreateRoute"
+        />
+
+    <EditText
+        android:id="@+id/minutesCreateRoute"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textAlignment="center"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@id/saveRoute"
+        app:layout_constraintEnd_toStartOf="@id/minCreateRoute"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mapCreateRoute"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/minCreateRoute"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/min"
+        android:textAlignment="center"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@id/saveRoute"
+        app:layout_constraintEnd_toStartOf="@id/secondsCreateRoute"
+        app:layout_constraintStart_toEndOf="@id/minutesCreateRoute"
+        app:layout_constraintTop_toBottomOf="@id/mapCreateRoute" />
+
+    <EditText
+        android:id="@+id/secondsCreateRoute"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:maxLength="2"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@id/saveRoute"
+        app:layout_constraintEnd_toStartOf="@id/secCreateRoute"
+        app:layout_constraintStart_toEndOf="@id/minCreateRoute"
+        app:layout_constraintTop_toBottomOf="@id/mapCreateRoute"
+        android:importantForAutofill="no"/>
+
+    <TextView
+        android:id="@+id/secCreateRoute"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/sec"
+        android:textAlignment="center"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@id/saveRoute"
+        app:layout_constraintEnd_toStartOf="@id/titleCreateRoute"
+        app:layout_constraintStart_toEndOf="@id/secondsCreateRoute"
+        app:layout_constraintTop_toBottomOf="@id/mapCreateRoute" />
+
+    <EditText
+        android:id="@+id/titleCreateRoute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="@string/route_title"
+        android:textAlignment="center"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@id/saveRoute"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/secCreateRoute"
+        app:layout_constraintTop_toBottomOf="@id/mapCreateRoute"
+        android:importantForAutofill="no"/>
+
+    <TextView
+        android:id="@+id/distanceCreateRoute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:hint="@string/distance"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/saveRoute"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minutesCreateRoute" />
+
+    <Button
+        android:id="@+id/saveRoute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/LightGrey"
+        android:text="@string/save_route"
+        android:textColor="#455A64"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/distanceCreateRoute"
+        app:layout_constraintTop_toBottomOf="@id/secondsCreateRoute" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

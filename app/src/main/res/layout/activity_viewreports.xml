@@ -1,0 +1,223 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewReports">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TableRow
+            android:id="@+id/firstRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="135dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/secondRow" >
+
+            <TextView
+                android:id="@+id/totalRunningDistanceTXT"
+                android:text="Distance ran:"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:id="@+id/totalRunningDistance"
+                android:text=""
+                android:textSize="22sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/secondRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstRow"
+            app:layout_constraintBottom_toTopOf="@+id/thirdRow" >
+
+            <TextView
+                android:id="@+id/totalTimeTXT"
+                android:text="Time spent running:"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:id="@+id/totalTime"
+                android:text=""
+                android:textSize="22sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/thirdRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/secondRow"
+            app:layout_constraintBottom_toTopOf="@+id/fourthRow" >
+
+            <TextView
+                android:id="@+id/longestDistanceTXT"
+                android:text="Longest distance ran:"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:id="@+id/longestDistance"
+                android:text=""
+                android:textSize="22sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fourthRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/thirdRow"
+            app:layout_constraintBottom_toTopOf="@+id/fifthRow" >
+
+            <TextView
+                android:id="@+id/shortestDistanceTXT"
+                android:text="Shortest distance ran:"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:id="@+id/shortestDistance"
+                android:text=""
+                android:textSize="22sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fifthRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fourthRow"
+            app:layout_constraintBottom_toTopOf="@+id/sixthRow" >
+
+            <TextView
+                android:id="@+id/longestTimeTXT"
+                android:text="Longest time ran:"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:id="@+id/longestTime"
+                android:text=""
+                android:textSize="22sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/sixthRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fifthRow"
+            app:layout_constraintBottom_toTopOf="@+id/seventhRow" >
+
+            <TextView
+                android:id="@+id/shortestTimeTXT"
+                android:text="Shortest time ran:"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:id="@+id/shortestTime"
+                android:text=""
+                android:textSize="22sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/seventhRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sixthRow"
+            app:layout_constraintBottom_toTopOf="@+id/eigthRow" >
+
+            <TextView
+                android:id="@+id/averagePaceTXT"
+                android:text="Average pace:"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:id="@+id/averagePace"
+                android:text=""
+                android:textSize="22sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/eigthRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seventhRow"
+            app:layout_constraintBottom_toTopOf="@+id/ninethRow" >
+
+            <TextView
+                android:id="@+id/fastestPaceTXT"
+                android:text="Fastest pace:"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:id="@+id/fastestPace"
+                android:text=""
+                android:textSize="22sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/ninethRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eigthRow"
+            app:layout_constraintBottom_toBottomOf="parent" >
+
+            <TextView
+                android:id="@+id/slowestPaceTXT"
+                android:text="Slowest pace:"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:id="@+id/slowestPace"
+                android:text=""
+                android:textSize="22sp"
+                />
+        </TableRow>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
